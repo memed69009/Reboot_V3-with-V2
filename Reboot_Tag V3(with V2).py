@@ -81,7 +81,7 @@ if not reason_counts.empty:
         color_discrete_sequence=px.colors.qualitative.Set3
     )
     fig.update_traces(texttemplate='%{y:.2f}%', textposition='outside', textfont_color='black')
-    fig.update_yaxes(range=[0, df["Percentage"].max() * 1.15])
+    fig.update_yaxes(range=[0, reason_counts["Percentage"].max() * 1.15])
     fig.update_layout(xaxis_title="PowerUp Reason", yaxis_title="Percentage")
     st.plotly_chart(fig, use_container_width=True)
 
